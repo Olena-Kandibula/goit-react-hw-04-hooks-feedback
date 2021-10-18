@@ -1,0 +1,30 @@
+.list {
+  width: 240px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.description {
+  width: 50%;
+}
+
+.itemCapsTotal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.itemCapsTotal span {
+  padding-right: 3px;
+}
