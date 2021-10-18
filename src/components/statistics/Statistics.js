@@ -6,7 +6,7 @@ import CapsCoffeeTotal from "./capsCoffeeTotal/capsCoffeeTotal";
 import { GiCoffeeCup } from "react-icons/gi";
 import { FiCheckCircle } from "react-icons/fi";
 
-const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+function Statistics({ good, neutral, bad, total, positivePercentage }) {
   return (
     <ul className={s.list}>
       <li className={s.item}>
@@ -49,7 +49,8 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
       </li>
     </ul>
   );
-};
+}
+
 Statistics.propTypes = {
   good: PropTypes.number.isRequired,
   neutral: PropTypes.number.isRequired,

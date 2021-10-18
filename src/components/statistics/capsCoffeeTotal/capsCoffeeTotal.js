@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import { GiCoffeeCup } from "react-icons/gi";
 
-const CapsCoffeeTotal = ({ total }) => {
+function CapsCoffeeTotal({ total }) {
   function generateRandomColor() {
     let color =
       "#" +
@@ -21,7 +21,7 @@ const CapsCoffeeTotal = ({ total }) => {
       ))}
     </>
   );
-};
+}
 
 CapsCoffeeTotal.propTypes = {
   total: PropTypes.number.isRequired,
