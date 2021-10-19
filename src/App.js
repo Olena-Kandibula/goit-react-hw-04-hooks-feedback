@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Section from "./components/section";
 import FeedbackOptions from "./components/feedbackOptions";
@@ -12,21 +12,19 @@ export default function App() {
   const [bad, setBad] = useState(0);
 
   const onLeaveFeedback = (e) => {
-    // console.log(e.target.name)
-
     const { name } = e.target;
 
     switch (name) {
       case "good":
-        setGood(good + 1);
+        setGood((state) => state + 1);
         break;
 
       case "neutral":
-        setNeutral(neutral + 1);
+        setNeutral((state) => state + 1);
         break;
 
       case "bad":
-        setBad(bad + 1);
+        setBad((state) => state + 1);
         break;
 
       default:
@@ -35,8 +33,7 @@ export default function App() {
   };
 
   const countTotalFeedback = () => {
-    const total = good + neutral + bad;
-    return total;
+    return good + neutral + bad;
   };
 
   const countPositiveFeedbackPercentage = () => {
